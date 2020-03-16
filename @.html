@@ -1,0 +1,31 @@
+<html>
+<head>
+<script language="javascript">
+function myvowel()
+{
+ var a= document.frm.txt1.value;
+var count=0,total_vowels=0;
+for(var i=0;i<a.length;i++)
+{
+if(a.charAt(i).match(/[a-zA-Z.@]/)!=null)
+{
+if(a.charAt(i).match(/[.@/]/))
+{
+count++;
+}
+}
+}
+document.frm.txt2.value=count;
+document.write("Total of @ and . is are" +count);
+alert("Total of @ and . is are"+count);
+}
+</script>
+</head>
+<body>
+<form name="frm">
+enter name<input type="text" name="txt1">
+<input type="submit" name="subm" value="Submit" onclick="myvowel(this);">
+<input type="text" name="txt2">
+</form>
+</body>
+</html>
